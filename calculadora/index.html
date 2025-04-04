@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Saira", sans-serif;
+      background-color: #86d3f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background-color: white;
+      border-radius: 20px;
+      padding: 20px;
+      width: 450px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .display {
+      text-align: right;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .display .operation {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .display .result {
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      height: 100px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .operator {
+      color: #0052cc;
+    }
+
+    .equal {
+      background-color: #0052cc;
+      color: white;
+      grid-column: span 2;
+    }
+
+    .history {
+      color: #0052cc;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .btn-light {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div class="operation" id="operation">61*13</div>
+      <div class="result" id="result">793</div>
+    </div>
+    <div class="history">HISTÓRICO</div>
+    <div class="buttons">
+      <button class="btn-light">⌫</button>
+      <button class="btn-light">C</button>
+      <button class="btn-light operator">%</button>
+      <button class="btn-light operator">/</button>
+
+      <button class="btn-light">1</button>
+      <button class="btn-light">2</button>
+      <button class="btn-light">3</button>
+      <button class="btn-light operator">x</button>
+
+      <button class="btn-light">4</button>
+      <button class="btn-light">5</button>
+      <button class="btn-light">6</button>
+      <button class="btn-light operator">-</button>
+
+      <button class="btn-light">7</button>
+      <button class="btn-light">8</button>
+      <button class="btn-light">9</button>
+      <button class="btn-light operator">+</button>
+
+      <button class="btn-light">.</button>
+      <button class="btn-light">0</button>
+      <button class="equal">=</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
