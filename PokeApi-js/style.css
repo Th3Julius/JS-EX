@@ -1,0 +1,45 @@
+#pokemon-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+
+.pokemon-card {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: #f8f9fa;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-card h2 {
+  font-size: 18px;
+  color: #ff4500;
+}
+
+.pokemon-card p {
+  font-size: 14px;
+  color: #555;
+}
